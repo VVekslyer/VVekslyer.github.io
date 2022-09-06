@@ -226,12 +226,15 @@ header h1 {
 .description {
 	font-size: 140%;
 	font-family: "DM Sans";
+	word-spacing: 0;
+	word-pacing: 0;
 }
 
 .highlight {
 	font-size: 160%;
 	font-weight: 700;
 	-webkit-text-fill-color: transparent;
+	text-align: left;
 
 	&-ml {
 		@extend .highlight;
