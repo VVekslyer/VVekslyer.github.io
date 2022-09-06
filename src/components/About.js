@@ -89,9 +89,9 @@ class About extends Component {
                     <p>My name is Vitaliy Vekslyer.</p>
                     <p>I'm building projects with the newest and most exciting technologies such as <br/>
                     <span className="highlight-ml">Machine Learning</span> &nbsp; and &nbsp; <span className="highlight-bci">Brain Computer Interfaces.</span></p>
-                    <p>I've recently graduated from &nbsp; <span className="highlight-cs">Computing Science</span> &nbsp; @ Douglas College <br/>
+                    <p>I've recently graduated from &nbsp; <span className="highlight-cs">Computing Science</span> &nbsp; @ Douglas College
                     and I'm looking for work as a &nbsp; <span className="highlight-swe">Software Developer.</span></p>
-                    <p>Feel free to contact me through <span className="highlight-in">LinkedIn.</span></p>
+                    <p>Feel free to contact me through <a href="https://www.linkedin.com/in/vitaliy-veksler-2aa32b198/"><span className="highlight-in">LinkedIn.</span></a></p>
                     <p>I am always looking for new projects to collaborate on and to gain experience from. :)</p>
                     </span>
                   </div>
