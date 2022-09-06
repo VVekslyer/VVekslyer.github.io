@@ -1,0 +1,134 @@
+{
+    "basic_info": {
+      "description_header": "Hello.",
+      "description": "My name is Vitaliy Vekslyer. I'm building projects with the newest and most exciting technologies such as Machine Learning and Brain Computer Interfaces. This is my portfolio website built with React. I have recently graduated from Computing Science at Douglas College and am currently looking for work as a developer. Feel free to contact me through my LinkedIn. I am always looking for new projects to work on and to gain experience from. :)",
+      "section_name": {
+        "about": "About me",
+        "projects": "Projects",
+        "skills": "Skills",
+        "experience": "Experience"
+      }
+    },
+    "projects": [
+      {
+        "title": "Brain Computer Interface for Unity & PyGame",
+        "startDate": "2021",
+        "description": "I used OpenBCI's API and Machine Learning to control games made in Unity and PyGame.\n • Used OpenBCI API and neuromore to allow user to control a car game in Unity.\n • Implemented a machine learning inspired perceptron model to understand when user wishes to move the car forward.\n • Achieved 98% accuracy of user's intention to move the car.\n • Currently working on allowing user to control pong game using PyGame & TensorFlow.",
+        "images": [
+          "images/portfolio/bci-controlled-game/p1.jpg",
+          "images/portfolio/bci-controlled-game/p2.png"
+        ],
+        "url": "https://github.com/VVekslyer/BCI-Controlled-Game",
+        "technologies": [
+          {
+            "class": "devicon-python-plain",
+            "name": "Python"
+          },
+          {
+            "class": "devicon-numpy-original",
+            "name": "NumPy"
+          },
+          {
+            "class": "devicon-tensorflow-original",
+            "name": "TensorFlow"
+          },
+          {
+            "class": "devicon-unity-original",
+            "name": "Unity"
+          },
+          {
+            "class": "devicon-csharp-plain",
+            "name": "C#"
+          }
+        ]
+      },
+      {
+        "title": "Asteroid Blaster",
+        "startDate": "2021",
+        "description": "Asteroids clone made with C++ SDL. I wanted to know how games in C++ as well as GUIs are really being made and I came across SDL which I learnt a lot about while making this and a few other simple games.\n • Made using object-oriented principles.\n • Used knowledge of physics, algebra, trigonometry to implement simple 2D sprite movement.",
+        "images": [
+          "images/portfolio/asteroids/AsteroidBlaster.gif",
+          "images/portfolio/asteroids/ship.png"
+        ],
+        "url": "https://github.com/VVekslyer/AsteroidBlaster",
+        "technologies": [
+          {
+            "class": "devicon-cplusplus-plain",
+            "name": "C++"
+          },
+          {
+            "class": "devicon-sdl-plain",
+            "name": "SDL"
+          }
+        ]
+      },
+      {
+        "title": "Exercise Journal",
+        "startDate": "2020",
+        "description": "The biggest collaborative project I had with seven other student developers. I delegated tasks using Agile PM principles and had worked closely with the frontend of the app with authentication of new users through the welcome screen.",
+        "images": [
+          "images/portfolio/exercise-journal/ej-footage.gif",
+          "images/portfolio/exercise-journal/p1.jpg"
+        ],
+        "url": "https://github.com/VVekslyer/Exercise-Journal",
+        "technologies": [
+          {
+            "class": "devicon-python-plain",
+            "name": "Python"
+          },
+          {
+            "class": "devicon-materialui-plain",
+            "name": "KivyMD"
+          },
+          {
+            "class": "devicon-androidstudio-plain",
+            "name": "Android Studio"
+          },
+          {
+            "class": "devicon-mongodb-plain",
+            "name": "MongoDB"
+          },
+          {
+            "class": "devicon-nodejs-plain",
+            "name": "Node.js"
+          },
+          {
+            "class": "devicon-javascript-plain",
+            "name": "JavaScript"
+          }
+        ]
+      }
+    ],
+    "experience": [
+      {
+        "company": "Douglas College",
+        "title": "Computing Science Student Assistant",
+        "years": "9.2021 - 8.2022",
+        "mainTech": [
+          "Python", "C++"
+        ],
+        "technologies": [
+          "C++",
+          "Qt",
+          "SDL",
+          "Python",
+          "RaspberryPi"
+        ]
+      },
+      {
+        "company": "Exercise Journal",
+        "title": "Lead Developer",
+        "years": "10.2021 - present",
+        "mainTech": [
+          "Python"
+        ],
+        "technologies": [
+          "Python",
+          "Kivy",
+          "JavaScript",
+          "Node.js",
+          "MongoDB"
+        ]
+      }
+    ]
+  }

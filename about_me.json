@@ -1,0 +1,82 @@
+{
+    "basic_info": {
+      "name": "Vitaliy Vekslyer",
+      "titles": [ "Software Developer", "AI Developer", "Machine Learning Engineer", "Game Developer" ],
+      "social": [
+        {
+          "name": "github",
+          "url": "https://github.com/VVekslyer",
+          "class": "fab fa-github"
+        },
+        {
+          "name": "linkedin",
+          "url": "https://www.linkedin.com/in/vitaliy-veksler-2aa32b198/",
+          "class": "fab fa-linkedin"
+        },
+        {
+          "name": "instagram",
+          "url": "https://www.instagram.com/vekslyer/",
+          "class": "fab fa-instagram"
+        }
+      ],
+      "image": "cyton.jpg"
+    },
+    "skills": {
+      "icons": [
+        {
+          "name": "C++",
+          "class": "devicon-cplusplus-plain",
+          "level": "85"
+        },
+        {
+          "name": "C#",
+          "class": "devicon-csharp-plain",
+          "level": "65"
+        },
+        {
+          "name": ".NET",
+          "class": "devicon-dotnetcore-plain",
+          "level": "70"
+        },
+        {
+          "name": "Python",
+          "class": "devicon-python-plain",
+          "level": "90"
+        },
+        {
+          "class": "devicon-numpy-original",
+          "name": "NumPy"
+        },
+        {
+          "name": "TensorFlow",
+          "class": "devicon-tensorflow-original",
+          "level": "60"
+        },
+        {
+          "name": "HTML",
+          "class": "devicon-html5-plain",
+          "level": "95"
+        },
+        {
+          "name": "CSS",
+          "class": "devicon-css3-plain",
+          "level": "95"
+        },
+        {
+          "name": "React",
+          "class": "devicon-react-plain",
+          "level": "80"
+        },
+        {
+          "name": "TypeScript",
+          "class": "devicon-typescript-plain",
+          "level": "90"
+        },
+        {
+          "name": "JavaScript",
+          "class": "devicon-javascript-plain",
+          "level": "70"
+        }
+      ]
+    }
+  }
