@@ -4,6 +4,7 @@ import AwesomeSlider from "react-awesome-slider";
 import AwesomeSliderStyles from "../scss/light-slider.scss";
 import AwesomeSliderStyles2 from "../scss/dark-slider.scss";
 import "react-awesome-slider/dist/custom-animations/scale-out-animation.css";
+import { If, Then, Else } from 'react-if';
 
 class ProjectDetailsModal extends Component {
   render() {
@@ -13,6 +14,7 @@ class ProjectDetailsModal extends Component {
       var title = this.props.data.title;
       var description = this.props.data.description;
       var url = this.props.data.url;
+      var img = [{props:{'data-src':null}}];
       if (this.props.data.technologies) {
         var tech = technologies.map((icons, i) => {
           return (
@@ -29,6 +31,7 @@ class ProjectDetailsModal extends Component {
             </li>
           );
         });
+        // TODO - Fix slider-image
         if (this.props.data.images) {
           var img = images.map((elem, i) => {
             return <div key={i} data-src={elem} />;
@@ -49,13 +52,30 @@ class ProjectDetailsModal extends Component {
         </span>
         <div className="col-md-12">
           <div className="col-md-10 mx-auto" style={{ paddingBottom: "50px" }}>
-            <AwesomeSlider
-              cssModule={[AwesomeSliderStyles, AwesomeSliderStyles2]}
-              animation="scaleOutAnimation"
-              className="slider-image"
-            >
+
+
+          <If condition={img[0].props['data-src'] === 'images/portfolio/exercise-journal/ej-footage.gif'}>
+              <Then>
+                <AwesomeSlider
+                cssModule={[AwesomeSliderStyles, AwesomeSliderStyles2]}
+                animation="scaleOutAnimation"
+                className="ej-image"
+                >
+                {img}
+                </AwesomeSlider>
+              </Then>
+              <Else>
+                <AwesomeSlider
+                  cssModule={[AwesomeSliderStyles, AwesomeSliderStyles2]}
+                  animation="scaleOutAnimation"
+                  className="slider-image"
+                >
               {img}
-            </AwesomeSlider>
+                </AwesomeSlider>
+              </Else>
+            </If>
+            
+
           </div>
           <div className="col-md-10 mx-auto">
             <h3 style={{ padding: "5px 5px 0 5px" }}>

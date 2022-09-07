@@ -112,9 +112,13 @@ header h1 {
 	border: 5px solid #1F1F1F;
 }
 
+.ej-image {
+	border: 5px solid #1F1F1F;
+	height: 850px;
+}
+
 .slider-tab {
 	background-color: #1F1F1F;
-	height: 25px;
 }
 
 .slider-iconfiy {
@@ -227,7 +231,6 @@ header h1 {
 	font-size: 140%;
 	font-family: "DM Sans";
 	word-spacing: 0;
-	word-pacing: 0;
 }
 
 .highlight {
@@ -396,7 +399,7 @@ header h1 {
 }
 
 .modal-description {
-	text-align: justify;
+	text-align: left;
 	padding: 5px 5px 0 5px;
 	margin-bottom: 20px;
 	font-size: 12px;
