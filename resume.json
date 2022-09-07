@@ -67,8 +67,7 @@
         "startDate": "2020",
         "description": "The biggest collaborative project I had with seven other student developers. I delegated tasks using Agile PM principles and had worked closely with the frontend of the app with authentication of new users through the welcome screen.",
         "images": [
-          "images/portfolio/exercise-journal/ej-footage.gif",
-          "images/portfolio/exercise-journal/p1.jpg"
+          "images/portfolio/exercise-journal/ej-footage.gif"
         ],
         "url": "https://github.com/VVekslyer/Exercise-Journal",
         "technologies": [

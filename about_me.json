@@ -39,13 +39,19 @@
           "level": "70"
         },
         {
+          "name": "Java",
+          "class": "devicon-java-plain",
+          "level": "70"
+        },
+        {
           "name": "Python",
           "class": "devicon-python-plain",
           "level": "90"
         },
         {
           "class": "devicon-numpy-original",
-          "name": "NumPy"
+          "name": "NumPy",
+          "level": "60"
         },
         {
           "name": "TensorFlow",
