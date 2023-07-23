@@ -1,7 +1,7 @@
 {
     "basic_info": {
       "description_header": "Hello.",
-      "description": "My name is Vitaliy Vekslyer. I'm building projects with the newest and most exciting technologies such as Machine Learning and Brain Computer Interfaces. This is my portfolio website built with React. I have recently graduated from Computing Science at Douglas College and am currently looking for work as a developer. Feel free to contact me through my LinkedIn. I am always looking for new projects to work on and to gain experience from. :)",
+      "description": "My name is Vitaliy Vekslyer. I am an aspiring engineer enrolled in Engineering Physics @ SFU. I am always looking for new projects to work on and to gain experience from.",
       "section_name": {
         "about": "About me",
         "projects": "Projects",
@@ -11,7 +11,7 @@
     },
     "projects": [
       {
-        "title": "Brain Computer Interface for Unity & PyGame",
+        "title": "Brain Computer Interface",
         "startDate": "2021",
         "description": "I used OpenBCI's API and Machine Learning to control games made in Unity and PyGame.\n • Used OpenBCI API and neuromore to allow user to control a car game in Unity.\n • Implemented a machine learning inspired perceptron model to understand when user wishes to move the car forward.\n • Achieved 98% accuracy of user's intention to move the car.\n • Currently working on allowing user to control pong game using PyGame & TensorFlow.",
         "images": [
@@ -100,33 +100,36 @@
     ],
     "experience": [
       {
-        "company": "Douglas College",
-        "title": "Computing Science Student Assistant",
-        "years": "9.2021 - 8.2022",
+        "company": "Polyfill Software",
+        "title": "Software Developer",
+        "years": "9.2022 - 6.2023",
         "mainTech": [
-          "Python", "C++"
+          "TypeScript", "React", "NestJS"
         ],
         "technologies": [
-          "C++",
+          "TypeScript",
+          "React",
+          "NestJS",
+          "Prisma",
+          "PostgreSQL",
+          "Docker",
+          "Azure",
+          "Linear"
+        ]
+      },
+      {
+        "company": "Douglas College",
+        "title": "Computing Science TA",
+        "years": "9.2021 - 8.2022",
+        "mainTech": [
+          "Python", "C/C++"
+        ],
+        "technologies": [
+          "C/C++",
           "Qt",
           "SDL",
           "Python",
           "RaspberryPi"
-        ]
-      },
-      {
-        "company": "Exercise Journal",
-        "title": "Lead Developer",
-        "years": "10.2021 - present",
-        "mainTech": [
-          "Python"
-        ],
-        "technologies": [
-          "Python",
-          "Kivy",
-          "JavaScript",
-          "Node.js",
-          "MongoDB"
         ]
       }
     ]

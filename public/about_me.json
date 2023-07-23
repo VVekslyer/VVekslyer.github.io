@@ -1,7 +1,7 @@
 {
     "basic_info": {
       "name": "Vitaliy Vekslyer",
-      "titles": [ "Software Developer", "AI Developer", "Machine Learning Engineer", "Game Developer" ],
+      "titles": [ "Engineering Physicist", "Software Developer", "ML Engineer", "Project Lead" ],
       "social": [
         {
           "name": "github",
@@ -24,7 +24,7 @@
     "skills": {
       "icons": [
         {
-          "name": "C++",
+          "name": "C/C++",
           "class": "devicon-cplusplus-plain",
           "level": "85"
         },
@@ -39,9 +39,9 @@
           "level": "70"
         },
         {
-          "name": "Java",
-          "class": "devicon-java-plain",
-          "level": "70"
+          "name": "MATLAB",
+          "class": "devicon-matlab-plain",
+          "level": "90"
         },
         {
           "name": "Python",
@@ -49,24 +49,14 @@
           "level": "90"
         },
         {
-          "class": "devicon-numpy-original",
           "name": "NumPy",
+          "class": "devicon-numpy-original",
           "level": "60"
         },
         {
           "name": "TensorFlow",
           "class": "devicon-tensorflow-original",
           "level": "60"
-        },
-        {
-          "name": "HTML",
-          "class": "devicon-html5-plain",
-          "level": "95"
-        },
-        {
-          "name": "CSS",
-          "class": "devicon-css3-plain",
-          "level": "95"
         },
         {
           "name": "React",
