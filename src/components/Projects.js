@@ -50,6 +50,7 @@ export default function Projects(props) {
         <div className="col-md-12">
           <h1 className="section-title">
             <span>{sectionName}</span>
+            <p className="note">Click on project to view</p>
           </h1>
           <div className="col-md-12 mx-auto">
             <div className="row mx-auto">
