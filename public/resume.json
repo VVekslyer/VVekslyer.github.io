@@ -17,7 +17,7 @@
         "images": [
           "images/portfolio/visual-sepsis-detector/graph.png"
         ],
-        "url": "",
+        "url": "./Visual Sepsis Detector - Specifications ver. 7-18-2023.pdf",
         "technologies": [
           {
             "class": "devicon-matlab-plain",
