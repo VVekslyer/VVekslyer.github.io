@@ -106,6 +106,7 @@ export default function About(props) {
                     <p>My name is Vitaliy Vekslyer.</p>
                     <p>I'm building projects with the newest and most exciting technologies such as <br/>
                     <span className="highlight-ml">Machine Learning</span> &nbsp; and &nbsp; <span className="highlight-bci">Brain Computer Interfaces.</span></p>
+                    <p>My goal is to use leadership and problem solving to create meaningful and innovative solutions that a positive impact on people, society and the world.</p>
                     <p>I am studying engineering physics @ Simon Fraser University.
                     I am looking to gain experience as an engineer by creating and collaborating on projects.</p>
                     <p>Feel free to contact me through <a href="https://www.linkedin.com/in/vitaliy-veksler-2aa32b198/"><span className="highlight-in">LinkedIn.</span></a></p>

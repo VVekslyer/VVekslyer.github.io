@@ -44,6 +44,11 @@
           "level": "90"
         },
         {
+          "name": "Simulink",
+          "class": "devicon-matlab-line",
+          "level": "90"
+        },
+        {
           "name": "Python",
           "class": "devicon-python-plain",
           "level": "90"
