@@ -46,13 +46,17 @@ export default function Projects(props) {
     });
 
     return (
-      <section id="portfolio">
+      <section id="projects">
         <div className="col-md-12">
           <h1 className="section-title">
             <span>{sectionName}</span>
           </h1>
           <div className="col-md-12 mx-auto">
-            <div className="row mx-auto">{projects}</div>
+            <div className="row mx-auto">
+              <>{projects[0]}</>
+              <>{projects[1]}</>
+              <>{projects[3]}</>
+            </div>
           </div>
           <ProjectDetailsModal
             show={detailsModalShow}

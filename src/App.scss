@@ -415,7 +415,7 @@ header h1 {
 	color: black !important;
 }
 
-#portfolio {
+#projects {
 	background: #1F1F1F;
 	padding-bottom: 5%;
 }
@@ -426,7 +426,11 @@ header h1 {
 	text-align: center;
 }
 
-.portfolio .portfolio-item .portfolio-item-caption {
+.text-center {
+	font-family: system-ui;
+}
+
+.projects .portfolio-item .portfolio-item-caption {
 	-webkit-transition: all ease 0.5s;
 	-moz-transition: all ease 0.5s;
 	transition: all ease 0.5s;
@@ -434,19 +438,19 @@ header h1 {
 	background-color: rgba(51, 51, 51, 0.9);
 }
 
-.portfolio .portfolio-item .portfolio-item-caption:hover {
+.projects .portfolio-item .portfolio-item-caption:hover {
 	opacity: 1;
 }
 
-.portfolio .portfolio-item .portfolio-item-caption .portfolio-item-caption-content {
+.projects .portfolio-item .portfolio-item-caption .portfolio-item-caption-content {
 	font-size: 1.5rem;
 }
 
 @media (min-width: 576px) {
-	.portfolio .closeButtonResponsive {
+	.projects .closeButtonResponsive {
 		display: block;
 	}
-	.portfolio .portfolio-item {
+	.projects .portfolio-item {
 		margin-bottom: 30px;
 	}
 }
