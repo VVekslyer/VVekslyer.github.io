@@ -11,9 +11,40 @@
     },
     "projects": [
       {
+        "title": "Computer Vision-powered Visual Sepsis Detector",
+        "startDate": "2023",
+        "description": "Undergraduate research project of a computer-powered microscope for classification of sepsis-inducing bacteria using computer vision. I was the lead of the engineering team and had integrated a team of mechanical, electrical, computer and biomedical engineering students to create an actuator-powered automated microscope that moves around in an XY-axis to take pictures of a sample and then applies a deep learning model to classify different bacteria and assess a patient's risk of developing sepsis. This project is still ongoing as of July 2023, the device is ready but we require far more data for our model. I had worked closely with the CMOS image sensor, optics, and image processing of the device.",
+        "images": [
+          "images/portfolio/visual-sepsis-detector/graph.png"
+        ],
+        "url": "./Visual Sepsis Detector - Specifications ver. 7-18-2023.pdf",
+        "technologies": [
+          {
+            "class": "devicon-python-plain",
+            "name": "Python"
+          },
+          {
+            "class": "devicon-numpy-original",
+            "name": "NumPy"
+          },
+          {
+            "class": "devicon-tensorflow-original",
+            "name": "TensorFlow"
+          },
+          {
+            "class": "devicon-unity-original",
+            "name": "Unity"
+          },
+          {
+            "class": "devicon-csharp-plain",
+            "name": "C#"
+          }
+        ]
+      },
+      {
         "title": "Brain Computer Interface",
         "startDate": "2021",
-        "description": "I used OpenBCI's API and Machine Learning to control games made in Unity and PyGame.\n • Used OpenBCI API and neuromore to allow user to control a car game in Unity.\n • Implemented a machine learning inspired perceptron model to understand when user wishes to move the car forward.\n • Achieved 98% accuracy of user's intention to move the car.\n • Currently working on allowing user to control pong game using PyGame & TensorFlow.",
+        "description": "I used OpenBCI's API and Machine Learning to control games made in Unity and PyGame.\n • Used OpenBCI API and neuromore to allow user to control a car game in Unity.\n • Implemented a machine learning inspired perceptron model to understand when user wishes to move the car forward.\n • Achieved 98% accuracy of user's intention to move the car.",
         "images": [
           "images/portfolio/bci-controlled-game/p1.jpg",
           "images/portfolio/bci-controlled-game/p2.png"
