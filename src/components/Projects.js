@@ -3,15 +3,15 @@ import ProjectDetailsModal from './ProjectDetailsModal';
 
 export default function Projects(props) {
   const [deps, setDeps] = useState({});
-  const [detailsModalShow, setDetailsModalShow] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   const detailsModalShowHandler = (data) => {
-    setDetailsModalShow(true);
+    setShowModal(true);
     setDeps(data);
   };
 
   const detailsModalCloseHandler = () => {
-    setDetailsModalShow(false);
+    setShowModal(false);
   };
 
   if (props.resumeProjects && props.resumeBasicInfo) {
@@ -53,19 +53,22 @@ export default function Projects(props) {
             <p className="note">Click on project to view</p>
           </h1>
           <div className="col-md-12 mx-auto">
-            <div className="row mx-auto">
+            <div className="row mx-auto justify-content-center"> {/* Add 'justify-content-center' */}
               <>{projects[0]}</>
               <>{projects[1]}</>
+              <>{projects[2]}</>
               <>{projects[3]}</>
+              <>{projects[4]}</>
             </div>
           </div>
           <ProjectDetailsModal
-            show={detailsModalShow}
+            show={showModal}
             onHide={detailsModalCloseHandler}
             data={deps}
           />
         </div>
       </section>
     );
+    
   }
 }

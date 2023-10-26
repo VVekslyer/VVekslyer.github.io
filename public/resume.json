@@ -145,6 +145,30 @@
             "name": "JavaScript"
           }
         ]
+      },
+      {
+        "title": "SFU OpFair 2024 Website",
+        "startDate": "2023",
+        "description": "Created the OpFair 2024 website; SFU's largest annual tech job fair hosted by the Faculty of Applied Sciences and the SFU Engineering Science Student Society.",
+        "images": [
+          "images/portfolio/opfair-website/p1.png",
+          "images/portfolio/opfair-website/p2.png"
+        ],
+        "url": "https://opfair-website.vercel.app",
+        "technologies": [
+          {
+            "class": "devicon-javascript-plain",
+            "name": "JavaScript"
+          },
+          {
+            "class": "devicon-react-plain",
+            "name": "React"
+          },
+          {
+            "class": "devicon-css3-plain",
+            "name": "CSS"
+          }
+        ] 
       }
     ],
     "experience": [
