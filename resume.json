@@ -6,10 +6,61 @@
         "about": "About me",
         "projects": "Projects",
         "skills": "Skills",
-        "experience": "Experience"
+        "experience": "Experience",
+        "education": "Education"
       }
     },
     "projects": [
+      {
+        "title": "Laser-writing Maskless Lithography Machine",
+        "startDate": "2026",
+        "description": "A laser-writing maskless lithography machine for 1μm feature size device microfabrication, built during a capstone design course at SFU, used as a modern alternative to the traditional photomask-based lithography machine in the SFU Engineering Science cleanroom. The machine uses a 405nm 1mW laser module to directly write patterns onto a photoresist-coated substrate, eliminating the need for photomasks and allowing rapid prototyping without the lengthy mask manufactuing process. The machine also allows use outside of the cleanroom, with its own air filtering mechanism. It comes with its own GUI with a controlled XYZ stage and camera, allowing for easier mark alignment.",
+        "images": [
+          "images/litho.png"
+        ],
+        "url": "./12G, Design Specifications.pdf",
+        "technologies": [
+          {
+            "class": "devicon-cpp",
+            "name": "Hardware"
+          },
+          {
+            "class": "devicon-cpp",
+            "name": "Firmware"
+          },
+          {
+            "class": "devicon-cpp",
+            "name": "Laser engineering"
+          },
+          {
+            "class": "devicon-cpp",
+            "name": "C++"
+          },
+          {
+            "class": "devicon-qt",
+            "name": "GTK"
+          }
+        ]
+      },
+      {
+        "title": "Stern-Gerlach Experiment Simulator",
+        "startDate": "2024",
+        "description": "A simple Stern-Gerlach experiment simulator made in C++ for PHYS 385 - Quantum II, Fall 2024. User can choose up to three SG machines and choose the initial state of the particles. Serves as an interactive visualization of the Stern-Gerlach experiment and the concept of quantum spin, to enhance understanding and modelling efforts of undergraduate students enrolled in quantum mechanics compared to other existing limited web-based simulators.",
+        "images": [
+          "images/Stern-gerlach.png"
+        ],
+        "url": "https://github.com/VVekslyer/SternGerlachSimulator",
+        "technologies": [
+          {
+            "class": "devicon-cpp",
+            "name": "C++"
+          },
+          {
+            "class": "devicon-qt",
+            "name": "Qt"
+          }
+        ]
+      },
       {
         "title": "Computer Vision-powered Visual Sepsis Detector",
         "startDate": "2023",
@@ -177,9 +228,37 @@
     ],
     "experience": [
       {
+        "company": "NTT Inc. (BRL)",
+        "title": "Semiconductor Research Intern",
+        "years": "May 2025 – Dec 2025",
+        "location": "Atsugi, Kanagawa, Japan",
+        "mainTech": [
+          "Silvaco TCAD",
+          "AlN/AlGaN HEMTs",
+          "Device Fabrication"
+        ],
+        "technologies": [
+          "AMASS",
+          "LaTeX",
+          "Hall Effect",
+          "AFM",
+          "XRD",
+          "Photolithography",
+          "Plasma Etching",
+          "Chemical Etching"
+        ],
+        "highlights": [
+          "Designed, fabricated, and evaluated AlN/AlGaN-based HEMTs to reduce power consumption and carbon footprint in power and RF electronics within NTT’s Multidisciplinary Materials Design and Science Laboratory (Thin-Film Materials Research Group).",
+          "Built optimization simulations using Silvaco TCAD, AMASS, and hand analysis via LaTeX; derived an optical phonon scattering model validated against Hall-effect measurements.",
+          "Performed characterization with Bruker AFM and composition/thickness analysis with Malvern Panalytical XRD; carried out device fabrication via photolithography and chemical/plasma etching (Nanosystems, SAMCO tools).",
+          "Evaluated device stacks and compositions to maximize drain current while minimizing gate leakage, supporting future AlN/AlGaN device research in the lab."
+        ]
+      },
+      {
         "company": "Polyfill Software",
         "title": "Software Developer",
         "years": "9.2022 - 6.2023",
+        "location": "Vancouver, BC, Canada",
         "mainTech": [
           "TypeScript", "React", "NestJS"
         ],
@@ -187,11 +266,19 @@
           "TypeScript",
           "React",
           "NestJS",
+          "Node.js",
+          "C#",
           "Prisma",
           "PostgreSQL",
           "Docker",
           "Azure",
           "Linear"
+        ],
+        "highlights": [
+          "Created full-stack applications in JavaScript/TypeScript, C#, React, Node.js and NestJS.",
+          "Worked on Sosido, a collaboration platform for medical research in Canada (https://www.sosido.com).",
+          "Developed a natural language statistical model enabling automated matching of Sosido’s users to recent publications, reducing missed user matches by as much as 75% and improving admin workflow.",
+          "Worked closely with clients, adapting to changing requirements and needs."
         ]
       },
       {
@@ -208,6 +295,18 @@
           "Python",
           "RaspberryPi"
         ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "Simon Fraser University",
+        "program": "B.A.Sc Engineering Physics",
+        "years": "May 2023 - Present"
+      },
+      {
+        "institution": "Douglas College",
+        "program": "Mathematics",
+        "years": "Sep 2020 - Aug 2022"
       }
     ]
   }
