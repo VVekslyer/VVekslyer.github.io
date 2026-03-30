@@ -1,22 +1,12 @@
 {
     "basic_info": {
       "name": "Vitaliy Vekslyer",
-      "titles": [ "Engineering Scientist", "Software Developer", "Project Lead" ],
+      "titles": [ "Engineering Scientist", "Project Lead", "Software Engineer"],
       "social": [
         {
           "name": "github",
           "url": "https://github.com/VVekslyer",
-          "class": "fab fa-github"
-        },
-        {
-          "name": "linkedin",
-          "url": "https://www.linkedin.com/in/vitaliy-veksler-2aa32b198/",
-          "class": "fab fa-linkedin"
-        },
-        {
-          "name": "instagram",
-          "url": "https://www.instagram.com/vekslyer/",
-          "class": "fab fa-instagram"
+          "class": "fab git"
         }
       ],
       "image": "cyton.jpg"

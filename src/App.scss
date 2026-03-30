@@ -9,6 +9,86 @@ body {
 	color: #222;
 	background: #FFF;
 	scrollbar-color: #252522;
+	margin: 0;
+}
+
+.app-shell {
+	min-height: 100vh;
+}
+
+.sidebar {
+	width: 240px;
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	overflow: auto;
+	background: #1F1F1F;
+	border-right: 1px solid #333333;
+	padding: 18px 16px;
+	z-index: 10;
+
+	&__name {
+		font-family: "DM Sans";
+		font-size: 170%;
+		font-weight: 700;
+		color: white;
+		margin-bottom: 14px;
+		letter-spacing: 0.5px;
+	}
+
+	&__links {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+	}
+
+	&__link {
+		font-family: 'Nunito Sans', sans-serif;
+		font-size: 140%;
+		color: white;
+		text-decoration: none;
+		padding: 6px 8px;
+		border-radius: 6px;
+
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+			text-underline-offset: 4px;
+		}
+	}
+}
+
+.app-main {
+	min-height: 100vh;
+	margin-left: 240px;
+	min-width: 0;
+}
+
+@media (max-width: 768px) {
+	.app-shell {
+		flex-direction: column;
+	}
+
+	.sidebar {
+		width: 100%;
+		height: auto;
+		position: relative;
+		left: auto;
+		top: auto;
+		bottom: auto;
+		border-right: none;
+		border-bottom: 1px solid #333333;
+	}
+
+	.app-main {
+		margin-left: 0;
+	}
+
+	.sidebar__links {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
 }
 
 body::-webkit-scrollbar-track {
@@ -29,14 +109,18 @@ html {
 }
 
 .title-container {
-	height: 50px;
+	min-height: 32px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .title-styles {
 	font-family: 'Nunito Sans', sans-serif;
-	font-size: 250%;
+	font-size: 190%;
 	color: white;
-	margin-left: 20.5%;
+	margin: 0;
+	text-align: center;
 }
 
 .header-icon {
@@ -47,20 +131,30 @@ html {
 
 header {
 	position: relative;
-	height: 520px;
-	min-height: 450px;
+	height: auto;
+	min-height: 280px;
 	width: 100%;
 	background-size: cover;
 	-webkit-background-size: cover;
-	text-align: left;
+	text-align: center;
 	overflow: hidden;
 	background-color: #1F1F1F;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	padding-top: 150px;
-	padding-bottom: 0;
+	padding-top: 40px;
+	padding-bottom: 50px;
+}
+
+.header-hero {
+	width: 100%;
+	max-height: 320px;
+	object-fit: cover;
+	object-position: center;
+	border-radius: 8px;
+	border: 1px solid #333333;
+	margin: 0 0 18px 0;
 }
 
 .language-icon {
@@ -97,12 +191,12 @@ header {
 
 // My name 
 header h1 {
-	font-size: 700%;
-	text-align: left;
+	font-size: 420%;
+	text-align: center;
 	font-weight: 600 !important;
 	color: white;
 	font-family: 'Nunito Sans', Arial, sans-serif;
-	margin: 0 auto 18px 20%;
+	margin: 0 0 8px 0;
 	width: 100%;
 }
 
@@ -132,11 +226,11 @@ header h1 {
 	background: #1F1F1F;
 	overflow: hidden;
 	height: 100%;
-	padding-bottom: 200px;
+	padding-bottom: 80px;
 }
 
 #about h1 {
-	padding-top: 5%;
+	padding-top: 0;
 	font: 18px/24px 'opensans-bold', sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 3px;
@@ -231,6 +325,40 @@ header h1 {
 	word-spacing: 0;
 }
 
+.about-minimal {
+	max-width: 900px;
+	padding-bottom: 40px;
+	color: white;
+
+	&__lede {
+		font-family: "DM Sans";
+		font-size: 220%;
+		margin: 0 0 12px 0;
+	}
+
+	&__body {
+		font-family: "DM Sans";
+		font-size: 160%;
+		line-height: 1.6;
+		margin: 0 0 18px 0;
+		color: white;
+	}
+
+	&__links {
+		display: flex;
+		gap: 18px;
+		flex-wrap: wrap;
+
+		a {
+			font-family: 'Nunito Sans', sans-serif;
+			font-size: 150%;
+			color: white;
+			text-decoration: underline;
+			text-underline-offset: 4px;
+		}
+	}
+}
+
 .highlight {
 	font-size: 160%;
 	font-weight: 700;
@@ -293,8 +421,106 @@ header h1 {
 	align-items: center;
 }
 
-#resume {
+#experience {
 	background: #1F1F1F;
+}
+
+#education {
+	background: #1F1F1F;
+}
+
+.experience-list {
+	max-width: 980px;
+	padding-bottom: 30px;
+}
+
+.experience-subtitle {
+	font-family: 'Nunito Sans', sans-serif;
+	font-size: 150%;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	color: #696969;
+	margin: 0 0 12px 0;
+}
+
+.experience-item {
+	background: #262626;
+	border: 1px solid #333333;
+	border-radius: 8px;
+	padding: 14px 16px;
+	margin-bottom: 12px;
+	color: white;
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		gap: 14px;
+		flex-wrap: wrap;
+	}
+
+	&__left {
+		min-width: 220px;
+		flex: 1;
+	}
+
+	&__role {
+		font-family: "DM Sans";
+		font-size: 175%;
+		font-weight: 700;
+		margin: 0;
+		color: white;
+	}
+
+	&__sep {
+		margin: 0 8px;
+		color: #696969;
+	}
+
+	&__dates {
+		font-family: 'Nunito Sans', sans-serif;
+		font-size: 135%;
+		color: #696969;
+	}
+
+	&__company {
+		font-family: "DM Sans";
+		font-size: 150%;
+		color: white;
+	}
+
+	&__location {
+		font-family: 'Nunito Sans', sans-serif;
+		font-size: 135%;
+		color: #696969;
+		position: relative;
+		padding-left: 12px;
+		margin-left: 10px;
+
+		&::before {
+			content: "•";
+			position: absolute;
+			left: 0;
+			color: #696969;
+		}
+	}
+
+	&__highlights {
+		margin: 10px 0 0 18px;
+		padding: 0;
+		font-family: "DM Sans";
+		font-size: 145%;
+		line-height: 1.6;
+		color: white;
+	}
+
+	&__tech {
+		margin-top: 10px;
+		font-family: 'Nunito Sans', sans-serif;
+		font-size: 130%;
+		color: #cfcfcf;
+		line-height: 1.5;
+	}
 }
 
 .experience-icon {
@@ -417,7 +643,95 @@ header h1 {
 
 #projects {
 	background: #1F1F1F;
-	padding-bottom: 5%;
+	padding-bottom: 60px;
+}
+
+.projects-list {
+	max-width: 980px;
+	padding-bottom: 30px;
+}
+
+.project-post {
+	background: #262626;
+	border: 1px solid #333333;
+	border-radius: 8px;
+	padding: 14px 16px;
+	margin-bottom: 12px;
+
+	&__titleRow {
+		display: flex;
+		align-items: baseline;
+		justify-content: space-between;
+		gap: 12px;
+		flex-wrap: wrap;
+		margin: 0;
+		padding: 0;
+	}
+
+	&__title {
+		font-family: "DM Sans";
+		font-size: 170%;
+		font-weight: 700;
+		margin: 0;
+		line-height: 1.2;
+		color: white;
+		letter-spacing: 0.5px;
+		text-transform: none;
+	}
+
+	&__meta {
+		font-family: 'Nunito Sans', sans-serif;
+		font-size: 125%;
+		margin: 0;
+		color: #696969;
+	}
+
+	&__description {
+		font-family: "DM Sans";
+		font-size: 145%;
+		line-height: 1.6;
+		margin: 8px 0 0 0;
+		color: white;
+		white-space: pre-line;
+	}
+
+	&__image {
+		width: 100%;
+		max-height: 240px;
+		object-fit: cover;
+		border-radius: 6px;
+		border: 1px solid #333333;
+	}
+
+	&__tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+		list-style: none;
+		padding: 0;
+		margin: 10px 0 0 0;
+	}
+
+	&__tag {
+		font-family: 'Nunito Sans', sans-serif;
+		font-size: 115%;
+		padding: 5px 9px;
+		border-radius: 999px;
+		background: #333333;
+		color: white;
+	}
+
+	&__links {
+		margin-top: 10px;
+
+		a {
+			font-family: 'Nunito Sans', sans-serif;
+			font-size: 130%;
+			color: white;
+			text-decoration: underline;
+			text-underline-offset: 4px;
+		}
+	}
 }
 
 .portfolio-item {
@@ -468,8 +782,8 @@ header h1 {
 }
 
 .section-title {
-	padding-top: 5%;
-	padding-bottom: 5%;
+	padding-top: 40px;
+	padding-bottom: 24px;
 	font: 18px/24px 'opensans-bold', sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 3px;
@@ -498,7 +812,8 @@ footer {
 	color: white;
 	position: relative;
 	text-align: center;
-	padding-top: 150px;
+	padding-top: 60px;
+	padding-bottom: 60px;
 }
 
 footer a,
@@ -512,6 +827,81 @@ footer a:focus {
 }
 
 .social-links {
-	margin-top: 50px;
+	margin-top: 18px;
 	font-size: 22px;
+}
+
+.education-list {
+	max-width: 980px;
+	padding-bottom: 30px;
+}
+
+.education-item {
+	background: #262626;
+	border: 1px solid #333333;
+	border-radius: 8px;
+	padding: 14px 16px;
+	margin-bottom: 12px;
+	color: white;
+
+	&__top {
+		display: flex;
+		align-items: baseline;
+		justify-content: space-between;
+		gap: 14px;
+		flex-wrap: wrap;
+	}
+
+	&__left {
+		min-width: 220px;
+		flex: 1;
+	}
+
+	&__program {
+		font-family: "DM Sans";
+		font-size: 175%;
+		font-weight: 700;
+		color: white;
+	}
+
+	&__sep {
+		margin: 0 8px;
+		color: #696969;
+	}
+
+	&__school {
+		font-family: "DM Sans";
+		font-size: 150%;
+		color: white;
+	}
+
+	&__location {
+		font-family: 'Nunito Sans', sans-serif;
+		font-size: 135%;
+		color: #696969;
+		position: relative;
+		padding-left: 12px;
+		margin-left: 10px;
+
+		&::before {
+			content: "•";
+			position: absolute;
+			left: 0;
+			color: #696969;
+		}
+	}
+
+	&__dates {
+		font-family: 'Nunito Sans', sans-serif;
+		font-size: 135%;
+		color: #696969;
+	}
+
+	&__details {
+		margin-top: 10px;
+		font-family: 'Nunito Sans', sans-serif;
+		font-size: 130%;
+		color: #cfcfcf;
+		line-height: 1.5;
+	}
 }

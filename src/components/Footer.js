@@ -3,7 +3,9 @@ import React from 'react';
 export default function Footer(props) {
   let networks = null;
   if (props.sharedBasicInfo) {
-    networks = props.sharedBasicInfo.social.map((network) => {
+    networks = props.sharedBasicInfo.social
+      .filter((network) => network.name?.toLowerCase() !== 'github')
+      .map((network) => {
       return (
         <span key={network.name} className="m-4">
           <a href={network.url} target="_blank" rel="noopener noreferrer">

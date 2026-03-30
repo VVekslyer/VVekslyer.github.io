@@ -1,79 +1,60 @@
-import React from 'react';
-import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
-import Badge from 'react-bootstrap/Badge';
-
 export default function Experience(props) {
-  if (props.resumeExperience && props.resumeBasicInfo) {
+  if (props.resumeBasicInfo && props.resumeExperience) {
     const sectionName = props.resumeBasicInfo.section_name.experience;
-    const work = props.resumeExperience.map((work, i) => {
-      const technologies = work.technologies;
-      const mainTechnologies = work.mainTech;
+    const experience = props.resumeExperience || [];
 
-      const mainTech = mainTechnologies.map((technology, i) => (
-        <Badge pill className="main-badge mr-2 mb-2" key={i}>
-          {technology}
-        </Badge>
-      ));
+    const renderMetaLine = (left, right, key) => (
+      <div className="experience-item__top" key={key}>
+        <div className="experience-item__left">{left}</div>
+        <div className="experience-item__dates">{right}</div>
+      </div>
+    );
 
-      const tech = technologies.map((technology, i) => (
-        <Badge pill className="experience-badge mr-2 mb-2" key={i}>
-          {technology}
-        </Badge>
-      ));
+    const workItems = experience.map((work, i) => {
+      const highlights = (work.highlights || []).filter(Boolean);
+      const tech = Array.from(
+        new Set([...(work.mainTech || []), ...(work.technologies || [])].filter(Boolean))
+      );
 
       return (
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          date={work.years}
-          iconStyle={{
-            background: "#2C5364",
-            color: "#fff",
-            textAlign: "center",
-          }}
-          icon={<i className="fab fa-python experience-icon"></i>}
-          key={i}
-        >
-          <div style={{ textAlign: "left", marginBottom: "4px", font: "Nunito Sans" }}>
-            {mainTech}
-          </div>
+        <article className="experience-item" key={`${work.company}-${work.title}-${i}`}>
+          {renderMetaLine(
+            <>
+              <span className="experience-item__role">{work.title}</span>
+              <span className="experience-item__sep">—</span>
+              <span className="experience-item__company">{work.company}</span>
+              {work.location ? (
+                <span className="experience-item__location">{work.location}</span>
+              ) : null}
+            </>,
+            work.years,
+            'work'
+          )}
 
-          <h3 className="vertical-timeline-element-title" style={{ textAlign: "left" }}>
-            {work.title}
-          </h3>
-          <h4 className="vertical-timeline-element-subtitle" style={{ textAlign: "left" }}>
-            {work.company}
-          </h4>
-          <div style={{ textAlign: "left", marginTop: "15px" }}>{tech}</div>
-        </VerticalTimelineElement>
+          {highlights.length ? (
+            <ul className="experience-item__highlights">
+              {highlights.map((line) => (
+                <li key={line}>{line}</li>
+              ))}
+            </ul>
+          ) : null}
+
+          {tech.length ? (
+            <div className="experience-item__tech">{tech.join(' · ')}</div>
+          ) : null}
+        </article>
       );
     });
-    
+
     return (
-      <section id="resume" className="pb-5">
-        <div className="col-md-12 mx-auto">
-          <div className="col-md-12">
-            <h1 className="section-title">
-              <span className="text-black" style={{ textAlign: "center" }}>
-                {sectionName}
-              </span>
-            </h1>
-          </div>
+      <section id="experience" className="pb-5">
+        <div className="col-md-12">
+          <h1 className="section-title">
+            <span>{sectionName}</span>
+          </h1>
         </div>
-        <div className="col-md-8 mx-auto">
-          <VerticalTimeline>
-            {work}
-            <VerticalTimelineElement
-              iconStyle={{
-                background: "#2C5364",
-                color: "#fff",
-                textAlign: "center",
-              }}
-              icon={
-                <i className="fas fa-hourglass-start mx-auto experience-icon"></i>
-              }
-            />
-          </VerticalTimeline>
+        <div className="col-md-10 mx-auto experience-list">
+          {workItems}
         </div>
       </section>
     );

@@ -27,11 +27,15 @@ export default function Header(props) {
   }, () => true);
 
   return (
-    <header id="home" style={{ height: window.innerHeight, display: 'block' }}>
-      <div className="row aligner" style={{ height: '80%' }}>
+    <header id="home">
+      <div className="row aligner">
         <div className="col-md-12">
           <div>
-            <br />
+            <img
+              className="header-hero"
+              src="images/front.jpg"
+              alt="Site header"
+            />
             <h1 className="mb-0">
               <Typical steps={[name]} wrapper="p" />
             </h1>

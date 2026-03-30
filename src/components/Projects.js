@@ -1,47 +1,57 @@
-import React, { useState } from 'react';
-import ProjectDetailsModal from './ProjectDetailsModal';
-
 export default function Projects(props) {
-  const [deps, setDeps] = useState({});
-  const [showModal, setShowModal] = useState(false);
-
-  const detailsModalShowHandler = (data) => {
-    setShowModal(true);
-    setDeps(data);
-  };
-
-  const detailsModalCloseHandler = () => {
-    setShowModal(false);
-  };
-
   if (props.resumeProjects && props.resumeBasicInfo) {
     const sectionName = props.resumeBasicInfo.section_name.projects;
     const projects = props.resumeProjects.map((project) => {
+      const image = project?.images?.[0];
+      const technologies = (project?.technologies || [])
+        .map((t) => t?.name)
+        .filter(Boolean);
+      const url = project?.url;
+
       return (
-        <div
-          className="col-sm-12 col-md-6 col-lg-4"
-          key={project.title}
-          style={{ cursor: "pointer" }}
-        >
-          <span className="portfolio-item d-block">
-            <div
-              className="foto"
-              onClick={() => detailsModalShowHandler(project)}
-            >
-              <div>
+        <article className="project-post" key={project.title}>
+          <div className="row">
+            {image ? (
+              <div className="col-12 col-md-4 mb-4 mb-md-0">
                 <img
-                  src={project.images[0]}
-                  alt="projectImages"
-                  height="230"
-                  style={{ marginBottom: 0, paddingBottom: 0, position: 'relative' }}
+                  className="project-post__image"
+                  src={image}
+                  alt={`${project.title} screenshot`}
                 />
-                <span className="project-date">{project.startDate}</span>
-                <br />
-                <p className="project-title-settings mt-3">{project.title}</p>
               </div>
+            ) : null}
+            <div className={image ? "col-12 col-md-8" : "col-12"}>
+              <div className="project-post__titleRow">
+                <div className="project-post__title">{project.title}</div>
+                {project.startDate ? (
+                  <div className="project-post__meta">{project.startDate}</div>
+                ) : null}
+              </div>
+
+              {project.description ? (
+                <p className="project-post__description">{project.description}</p>
+              ) : null}
+
+              {technologies.length ? (
+                <ul className="project-post__tags">
+                  {technologies.map((name) => (
+                    <li className="project-post__tag" key={name}>
+                      {name}
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
+
+              {url ? (
+                <div className="project-post__links">
+                  <a href={url} target="_blank" rel="noopener noreferrer">
+                    View link
+                  </a>
+                </div>
+              ) : null}
             </div>
-          </span>
-        </div>
+          </div>
+        </article>
       );
     });
 
@@ -50,22 +60,8 @@ export default function Projects(props) {
         <div className="col-md-12">
           <h1 className="section-title">
             <span>{sectionName}</span>
-            <p className="note">Click on project to view</p>
           </h1>
-          <div className="col-md-12 mx-auto">
-            <div className="row mx-auto justify-content-center"> {/* Add 'justify-content-center' */}
-              <>{projects[0]}</>
-              <>{projects[1]}</>
-              <>{projects[2]}</>
-              <>{projects[3]}</>
-              <>{projects[4]}</>
-            </div>
-          </div>
-          <ProjectDetailsModal
-            show={showModal}
-            onHide={detailsModalCloseHandler}
-            data={deps}
-          />
+          <div className="col-md-10 mx-auto projects-list">{projects}</div>
         </div>
       </section>
     );
